@@ -57,7 +57,7 @@ docker run -d  --name zabbix-server --link zabbix-db:zabbix-db dkanbier/zabbix-s
 Start the web server:
 
 ````
-docker run -d -p 80:80 --link zabbix-db:zabbix-db --link zabbix-server:zabbix-server dkanbier/zabbix-web
+docker run -d --name zabbix-web -p 80:80 --link zabbix-db:zabbix-db --link zabbix-server:zabbix-server dkanbier/zabbix-web
 ````
 
 Done. There should be 3 running containers now:
